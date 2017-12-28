@@ -1,0 +1,21 @@
+{
+  "name": "servercapacity",
+  "version": "1.0.0",
+  "description": "analisi capacitat servidors",
+  "main": "interface.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node interface.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Enricds/servercapacity"
+  },
+  "keywords": [
+    "node",
+    "docker",
+    "dockerfile"
+  ],
+  "author": "EnricD",
+  "license": "ISC"
+}
