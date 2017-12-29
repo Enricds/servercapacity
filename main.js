@@ -11,11 +11,11 @@ var server = http.createServer(function(req, res) {
 });
 
 var inputFile='server1.csv';
-var dadaesserver = [];
+var dadesserver = [];
 
 
-llegirfitxer(inputFile, function (dadaesserver) {
-  console.log(JSON.stringify(dadaesserver));
+llegirfitxer(inputFile, function (dadesserver) {
+  console.log(JSON.stringify(dadesserver));
 });
 
 server.listen(8090);
