@@ -2,7 +2,7 @@
   "name": "servercapacity",
   "version": "1.0.0",
   "description": "analisi capacitat servidors",
-  "main": "interface.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node interface.js"
@@ -17,5 +17,8 @@
     "dockerfile"
   ],
   "author": "EnricD",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "csv": "^2.0.0"
+  }
 }
