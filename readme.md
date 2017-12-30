@@ -26,6 +26,7 @@ altres intervals.
 (això es faria molt fàcil amb el ilog però... val pasta)
 
 Accions:
+
 A1: no fer res
 A2: Situació poc clara: revisar les dades
 A3: Servidor al limit: cal afegir recursos o moure aplicacions a un altre servidor
