@@ -33,4 +33,8 @@ A3: Servidor al limit: cal afegir recursos o moure aplicacions a un altre servid
 Situacions:
 S1: Si 2 o 3 dels intervals té %pics > 40% -> A3
 S2: Si 2 o 3 dels intervals té %area > 70% -> A3
+S3: si els 3 intervals tenen %pics = 0 i %area < 70% -> A1
+S4: si pics interval 1< pics interval 2< pics interval 3 -> A3
+S4: si area interval 1< area interval 2< area interval 3 i area interval 3> 60% -> A3
 etc, etc
+resta de Situacions -> A2
