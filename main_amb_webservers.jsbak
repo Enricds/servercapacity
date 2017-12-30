@@ -1,0 +1,39 @@
+
+
+// Mòdul on tenim la funció per llegirun fitxer i passar-lo a un array
+var llegirfitxer = require('./llegircsv.js');
+
+var http = require('http');
+var fs = require('fs');
+
+// Directori de proves: /Users/enricdelgadosamper/Development/CapacityPlanning/servercapacity/servers
+
+var server = http.createServer(function(req, res) {
+  res.writeHead(200);
+  // res.write(req.url); //agafa el directori de la url
+
+  fs.readdir(req.url, function(err, items) {
+    for (var i=0; i<items.length; i++) {
+
+          var dadesserver = [];
+          var inputFile=req.url+'/'+items[i];
+
+          res.write(inputFile);
+          res.write('\n'); //return
+
+          llegirfitxer(inputFile, function (dadesserver) {
+            res.write(JSON.stringify(dadesserver)+'\n');
+            console.log(JSON.stringify(dadesserver));
+            // res.write('\n'); //return
+            // res.end();
+          });
+          res.write('\n'); //return
+    }
+    res.end();
+  });
+
+});
+
+//Escolta pel port 8090 i la url que li passem marca el directori on estan els fitxer a analitzar
+
+server.listen(8090);

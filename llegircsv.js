@@ -28,14 +28,11 @@ fs.createReadStream(fitxerin).pipe(parser);
 }
 
 // test. descomentar si cal.
-
 /*
-
-var inputFile='server1.csv';
+var inputFile='/Users/enricdelgadosamper/Development/CapacityPlanning/servercapacity/servers/server1.csv';
 var dadaesserver = [];
 
 llegirfitxer(inputFile, function (dadaesserver) {
   console.log(JSON.stringify(dadaesserver));
 });
-
 */
