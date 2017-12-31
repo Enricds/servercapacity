@@ -13,15 +13,15 @@ Per què 3? Peruqè 2 em sembla que dona poc joc i 4 es fa massa complicat.
 Suposem doncs que les dades ens venen en un array de dues diemsnions, array[x][y] i tenim a més una dada que es la capacitat màxima
 de a màquina. Aquesta és una dada molt importnat i que diferencia el que farem amb el mètode de curve-fitting.
 
-* 1) Dividim l'array en 3 intervals.
-* 2) Per cada interval, calculem
+* Dividim l'array en 3 intervals.
+* Per cada interval, calculem
     1. percentatge de pics respecte els punts de l'interval (considerem un pic, un valor que arriba a un 90% del maxim)
     2.  percentatge del area definida pels punts de l'interval respecte el Maxim*interval
 
-* 3) Amb aquestes dades podem definir una serie de Situacions basades en la foto d'un interval i en la comparativa amb els
+* Amb aquestes dades podem definir una serie de Situacions basades en la foto d'un interval i en la comparativa amb els
 altres intervals.
 
-* 4) Per cada Situació cal definir una Acció concreta que podrà ser:
+* Per cada Situació cal definir una Acció concreta que podrà ser:
 
 (això es faria molt fàcil amb el ilog però... val pasta)
 
