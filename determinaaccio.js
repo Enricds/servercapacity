@@ -1,27 +1,48 @@
 
-module.exports=determinaaccio;
+//Hi deu haver una manera d'exportar-ho tot de cop... suposo
+/*
+exports.module = NoFerRes;
+exports.module = Indeterminat;
+exports.module = RevisarPicsAplicacio;
+exports.module = RevisarConsumServidor;
+exports.module = PicsAmuntOk;
+exports.module = AreaAmuntOk;*/
 
-var accio = [
-  '0: No fer res',
-  '1: Revisar dades',
-  '2: Afegir recursos'
-]
+module.exports = {NoFerRes, Indeterminat, RevisarPicsAplicacio, RevisarConsumServidor, PicsAmunt, AreaAmunt}
 
-/* Això es podria fer directament en l'anàlisi de la situació però ho separo per si algun servidor cau en
-més d'una situación i es vol fer una determinació d'accio més complexa */
 
-var relacions = [
-  [0,2],  // S0 -> A2
-  [1,2],  // S1 -> A2
-  [2,0],  // S2 -> A0
-]
+  function NoFerRes(nomservidor) {
+    const Text = 'No fer res, tot ok'
+    console.log(nomservidor+': '+Text);
+    // Altres accions
+  }
 
-function determinaaccio(s) {
-  var ok=false;
-  for (var i=0; i<relacions.length; i++)
-    if (s[relacions[i][0]]) {
-      console.log(accio[relacions[i][1]]);
-      ok=true;
-     }
-  if (!ok) console.log(accio[1]); // Si cap sitaució encaixa, revisar dades
-}
+  function Indeterminat(nomservidor) {
+    const Text = 'Situació poc clara, revisar dades'
+    console.log(Text);
+    // Altres accions
+  }
+
+  function RevisarPicsAplicacio(nomservidor) {
+    const Text = 'Aplicacació amb pics excesssius. Revisar aplicacio'
+    console.log(nomservidor+': '+Text);
+    // Altres accions
+  }
+
+   function RevisarConsumServidor(nomservidor) {
+    const Text = 'Servidor amb consum excesssius. Cal incrementar recursos'
+    console.log(nomservidor+': '+Text);
+    // Altres accions
+  }
+
+  function PicsAmunt(nomservidor) {
+    const Text = 'Els pics estan augmentant, compte'
+    console.log(nomservidor+': '+Text);
+    // Altres accions
+  }
+
+  function AreaAmunt(nomservidor) {
+    const Text = 'S està incrementatnt l ús de recursos, compte'
+    console.log(nomservidor+': '+Text);
+    // Altres accions
+  }

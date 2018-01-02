@@ -21,7 +21,7 @@ var parser = parse({delimiter: ','}, function (err, data) {
         ArrayDades.push(t);
   //   console.log(JSON.stringify(ArrayDades));
     });
-    callback(ArrayDades);
+    callback(ArrayDades, fitxerin);
 });
 // read the inputFile, feed the contents to the parser
 fs.createReadStream(fitxerin).pipe(parser);
